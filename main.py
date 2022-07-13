@@ -1,518 +1,359 @@
-"""a = 16 * 2.2 + 7 - 0.2
-print(a)
+"""class Contact:
+    def __init__(self, name, phone, address, birthday):
+        self.name = name
+        self.phone = phone
+        self.address = address
+        self.birthday = birthday
+        # добавьте свойство address
+        # добавьте свойство birthday
+        print(f"Создаём новый контакт {name}")
 
 
-snake = '38.2'
-length = 6.5
-
-result = float(snake) * length
-
-print('В вагоне можно поставить в ряд', int(result), 'попугаев')"""
-from itertools import count
-
-"""countdown_str = ''
-
-for i in reversed(range(0, 11)):
-    countdown_str = countdown_str + str(i) + ', '
-
-countdown_str = countdown_str + ' поехали!'
-
-print(countdown_str)"""
-
-"""for messages_count in range(0, 21):
-    if messages_count == 0:
-        print('У вас нет новых сообщений')
-    elif messages_count == 1:
-        print('У вас 1 новое сообщение')
-    elif messages_count <= 4:
-        print('У вас', messages_count, 'новых сообщения')
-    else:
-        print('У вас', messages_count, 'новых сообщений')"""
+# здесь создайте объекты mike и vlad
+mike = Contact('Михаил Булгаков', '2-03-27', 'Россия, Москва, Большая Пироговская, дом 35б, кв. 6', '15.05.1891')
+vlad = Contact('Владимир Маяковский', '73-88', 'Россия, Москва, Лубянский проезд, д. 3, кв. 12', '19.07.1893')
+def print_contact():
+    print(f"{mike.name} — адрес: {mike.address}, телефон: {mike.phone}, день рождения: {mike.birthday}")
+    print(f"{vlad.name} — адрес: {vlad.address}, телефон: {vlad.phone}, день рождения: {vlad.birthday}")
+print_contact()
+# здесь вызовите функцию print_contact(),
+# и она напечатает на экране данные контактов mike и vlad"""
 
 
-"""for current_hour in range(0, 24):
-    print("На часах " + str(current_hour) + ":00.")
-    # Вместо многоточий напишите код
-    if current_hour < 6:
-        print('Доброй ночи!')
-    elif current_hour <= 11:
-        print('Доброе утро!')
-    elif current_hour <= 17:
-        print('Добрый день!')
-    elif current_hour <= 22:
-        print('Добрый вечер!')
-    else:
-        print('Доброй ночи!')"""
+"""class Contact:
+    def __init__(self, name, phone, birthday, address):
+        self.name = name
+        self.phone = phone
+        self.birthday = birthday
+        self.address = address
+        print(f"Создаём новый контакт {name}")
 
 
-""""# Добавьте новые условия в elif и else
-for messages_count in range(0, 21):
-    if messages_count == 0:
-        print('У вас нет новых сообщений')
-    elif messages_count == 1:
-        # напишите ваш код здесь
-        print('У вас 1 новое сообщение')
-    elif messages_count <=4:
-        # напишите ваш код здесь
-        print('У вас ' + str(messages_count) + ' новых сообщения')
-    else:
-        print('У вас ' + str(messages_count) + ' новых сообщений')"""
+mike = Contact("Михаил Булгаков", "2-03-27", "15.05.1891", "Россия, Москва, Большая Пироговская, дом 35б, кв. 6")
+vlad = Contact("Владимир Маяковский", "73-88", "19.07.1893", "Россия, Москва, Лубянский проезд, д. 3, кв. 12")
 
-"""for messages_count in range(0, 21):
-    if messages_count == 0:
-        print('У вас нет новых сообщений')
-    elif messages_count == 1:
-        # напишите ваш код здесь
-        print('У вас 1 новое сообщение')
-    elif messages_count == 2 and 3:
-        # напишите ваш код здесь
-        print('У вас ' + str(messages_count) + ' новых сообщения')
-    elif messages_count == 4 and 5:
-        print('У вас ' + str(messages_count) + ' новых сообщения')
-    else:
-        print('У вас ' + str(messages_count) + ' новых сообщений')"""
+
+def print_contact():
+    print(f"{mike.name} — адрес: {mike.address}, телефон: {mike.phone}, день рождения: {mike.birthday}")
+    print(f"{vlad.name} — адрес: {vlad.address}, телефон: {vlad.phone}, день рождения: {vlad.birthday}")
+
+
+# здесь измените адрес для объекта mike
+# здесь измените телефон для объекта mike
+mike.phone = 'К-058-67'
+mike.address = 'Россия, Москва, Нащокинский переулок, дом 3, кв. 44'
+# здесь измените адрес для объекта vlad
+# здесь измените телефон для объекта vlad
+vlad.phone = '2-35-71'
+vlad.address = 'Россия, Москва, Гендриков переулок, дом 15, кв. 5'
+
+print_contact()  # выводим данные на экран"""
 
 
 
-"""friends_names = ['Аня', 'Коля', 'Лёша', 'Лена', 'Миша']
-friends_cities = ['Владивосток', 'Красноярск', 'Москва', 'Обнинск', 'Чебоксары']
+#Задача №3
+"""class Contact:
+    def __init__(self, name, phone, birthday, address):
+        self.name = name
+        self.phone = phone
+        self.birthday = birthday
+        self.address = address
+        print(f"Создаём новый контакт {name}")
+    # здесь напишите метод show_contact()
+    # он будет очень похож на функцию print_contact()
 
-# Объявлен пустой словарь, его нужно будет наполнить элементами,
-# каждый из которых составлен по схеме "имя: город"
-friends =  {}
-
-# Допишите ваш код сюда
-for i in range(0, len(friends_names)):
-    friends[friends_names[i]] = friends_cities[i]
-
-#print("Лена живёт в городе",'Москва' )
-
-a = input('Введите имя ')
-a = str(a)
-name = a
-
-if name in friends:
-    print(name + ' живёт в городе ' + friends[name])
-    
-    
-favorite_songs = {
-    'Серёга': ['Unforgiven', 'Holiday', 'Highway to hell'], 
-    'Соня': ['Shake it out', 'The Show Must Go On', 'Наше лето'], 
-    'Дима': ['Владимирский централ', 'Мурка', 'Третье сентября',]
-}
-# Ниже напишите код, который напечатает на экран, сколько у Димы любимых песен
-
-# Ниже напишите код, который построчно напечатает
-# все любимые песни Сони.
-dima = len(favorite_songs['Дима'])
-print(dima)
-sonya = favorite_songs['Соня']
-for sonya in favorite_songs['Соня']:
-    print(sonya)"""
-
-"""friends = {
-    'Серёга': 'Омск',
-    'Соня': 'Москва',
-    'Дима': 'Челябинск',
-    'Алина': 'Хабаровск',
-    'Егор': 'Пермь'
-}
+    def show_contact(self):
+        print (f"{self.name} — адрес: {self.address}, телефон: {self.phone}, день рождения: {self.birthday}")
 
 
-def is_anyone_in(collection, city):
-    for friend in friends:
-        if collection[friend] == city:
-            print('В городе ' + collection[friend] + ' живёт ' + friend + '.' + ' Обязательно зайду в гости!')
+    def __str__(self):
+        return(f"{self.name} — адрес: {self.address}, телефон: {self.phone}, день рождения: {self.birthday}")
+
+
+mike = Contact("Михаил Булгаков", "2-03-27", "15.05.1891", "Россия, Москва, Большая Пироговская, дом 35б, кв. 6")
+vlad = Contact("Владимир Маяковский", "73-88", "19.07.1893", "Россия, Москва, Лубянский проезд, д. 3, кв. 12")
+
+print(mike)
+print(vlad)"""
+"""1.
+В прошлом задании для вывода на экран данных о каждом объекте мы писали отдельный код для каждого объекта.
+ Это громоздко и нерационально, ООП позволяет оптимизировать код.
+ 
+В классе Contact создайте метод show_contact(), который будет выводить данные любого объекта типа Contact в 
+том же виде, как сейчас их выводит функция print_contact.
+В теле класса Contact напишите метод show_contact, который в качестве параметра будет принимать переменную 
+self. В теле метода выполните print(), точно такой же, как в функции print_contact, только вместо имени 
+объекта в аргументе укажите self.
+Вызовите метод show_contact для объектов mike и vlad
+Удалите из кода функцию print_contact().
+Запустите код"""
+
+
+"""
+В прекоде подготовлен класс Planet, он описывает планеты и хранит свойства: name (имя), surface_area 
+(площадь поверхности в км²), average_temp_celcius (средняя температура поверхности планеты по Цельсию),
+ average_temp_fahrenheit (то же по Фаренгейту).
+Конструктор класса принимает на вход три параметра: имя планеты, её радиус в километрах и среднюю температуру 
+на поверхности в градусах Цельсия.
+В конструкторе вычислите площадь поверхности планеты. Для упрощения считайте планеты сферическими.
+Площадь поверхности сферы с радиусом r равна 4 * π * r² . Значение числа π получите так: math.pi (для этого 
+подключите модуль math).
+В конструкторе вычислите температуру поверхности по Фаренгейту.
+Чтобы перевести температуру по Цельсию в ш
+калу Фаренгейта, нужно умножить значение на 9/5 и прибавить 32."""
+
+# импортируйте библиотеку math
+"""import math
+
+
+class Planet:
+    def __init__(self, name, radius, temp_celsius):
+        self.name = name
+        self.surface_area = 4 * math.pi * radius * radius
+        self.average_temp_celsius = temp_celsius
+        self.average_temp_fahrenheit = (9 / 5) * temp_celsius + 32
+
+    def show_info(self):
+        print(f"Планета {self.name} имеет площадь поверхности {self.surface_area} кв.км.")
+        print(f"Средняя температура поверхности планеты: {self.average_temp_fahrenheit} по Фаренгейту.")
+
+    #def __str__(self):
+     #   return (f"Планета {self.name} имеет площадь поверхности {self.surface_area} кв.км. Средняя температура поверхности планеты: {self.average_temp_fahrenheit} по Фаренгейту.")
+# этот вариант тоже рабочий.
+
+jupiter = Planet('Юпитер', 69911, -108)
+# вызовите метод show_info для Юпитера
+jupiter.show_info()"""
+
+"""class Bird:
+    #  Это конструктор, он вызывается при создании объекта
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def show(self):
+        # Вызывается для вывода на экран всех свойств объекта
+        # это интерфейс класса, к нему можно обратиться из внешнего кода
+        print(f'{self.name} носит одежду размера "{self.size}".')
+
+
+# Создание объекта
+sparrow = Bird('Воробей', 'S')
+# Теперь можно воспользоваться его внешним интерфейсом: методом show()
+sparrow.show()
+
+# Результат: Воробей носит одежду размера "S"."""
+
+"""class Bird:
+    def __init__(self, name, size):
+        # Это конструктор, он вызывается при создании объекта
+        self.name = name
+        self.size = size
+
+    def show(self):
+        # Вызывается для вывода на экран всех свойств объекта
+        print(f'{self.name} носит одежду размера {self.size}.')
+
+
+class Parrot(Bird):
+    def __init__(self, name, size, sound):
+        super().__init__(name, size)
+        self.sound = sound
+
+    def show(self):
+        # Вызывается для вывода на экран всех свойств объекта
+        print(f'{self.name} носит одежду размера {self.size} и {self.sound}.')
+
+
+# Создание объектов
+sparrow = Bird('Воробей', 'S')
+ara = Parrot('Попугай ара', 'XL', 'разговаривает')
+nymphicus = Parrot('Попугай Корелла', 'S', 'щебечет')
+
+# Теперь можно воспользоваться его внешним интерфейсом: методом show()
+sparrow.show()
+ara.show()
+nymphicus.show()"""
+
+# Результат:
+# Воробей носит одежду размера S.
+# Попугай ара носит одежду размера XL и разговаривает.
+# Попугай Корелла носит одежду размера S и щебечет.
+
+"""class Bird:
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def show(self):
+        print(f'{self.name} носит одежду размера {self.size}.') # это интерфейс
+
+
+class Parrot(Bird):
+    def __init__(self, name, size, sound): # здесь наследуем от класса Bird
+        super().__init__(name, size) # супером оставляем name , size
+        self.sound = sound # добавляем новый параметр
+
+    def show(self):  # это интерфейс
+        print(f'{self.name} носит одежду размера {self.size} и {self.sound}.')
+
+
+class Predator(Bird): # здесь наследуем от класса Bird
+    def __init__(self, name, size, claws_size):
+        super().__init__(name, size)
+        self.claws_size = claws_size
+
+    def show(self):
+        print(f'{self.name} носит одежду размера {self.size} и '
+              f'когти размера {self.claws_size}.')
+
+
+class Egg(Predator):
+    def show(self):
+        print(f'Из яйца вылупится птичка {self.name} размера {self.size} с '
+              f'когтями размера {self.claws_size}.')"""
+
+
+# импортируем функции из библиотеки math для рассчёта расстояния
+"""from math import radians, sin, cos, acos
+
+
+class Point:
+    def __init__(self, latitude, longitude):
+        self.latitude = radians(latitude)
+        self.longitude = radians(longitude)
+
+    # считаем расстояние между двумя точками в км
+    def distance(self, other):
+        cos_d = sin(self.latitude) * sin(other.latitude) + cos(self.latitude) * cos(other.latitude) * cos(
+        self.longitude - other.longitude)
+
+        return 6371 * acos(cos_d)
+
+
+class City(Point):
+    def __init__(self, latitude, longitude, name, population):
+        # допишите код: сохраните свойства родителя
+        # и добавьте свойства name и population
+        super().__init__(latitude, longitude)
+        self.name = name
+        self.population = population
+
+    def show(self):
+        print(f"Город {self.name}, население {self.population} чел.")
+
+
+class Mountain(Point):
+    # допишите код: напишите конструктор, в нём сохраните свойства родителя
+    # и добавьте свойства name и height
+    def __init__(self, latitude, longitude, name, height):
+        super().__init__(latitude, longitude)
+        self.name = name
+        self.height = height
+    # Создайте метод show(self):
+    def show(self):
+        print(f'Высота горы {self.name} - {self.height} м.')
+    # информацию о горе нужно вывести в формате:
+    # "Высота горы <название> - <высота> м."
+
+
+# эта функция печатает расстояние
+# между двумя любыми наследниками класса Point
+def print_how_far(geo_object_1, geo_object_2):
+    print(f'От точки «{geo_object_1.name}» до точки «{geo_object_2.name}» — {geo_object_1.distance(geo_object_2)} км.')
+
+
+# основной код
+moscow = City(55.7522200, 37.6155600, 'Москва', 12615882)
+everest = Mountain(27.98791, 86.92529, 'Эверест', 8848)
+chelyabinsk = City(55.154, 61.4291, 'Челябинск', 1200703)
+
+moscow.show()
+everest.show()
+print_how_far(moscow, everest)
+print_how_far(moscow, chelyabinsk)"""
+
+"""Опишите на ООП взаимодействие студента, ментора, код-ревьюера и куратора.
+Все эти люди — люди, поэтому создадим базовый класс Human, со свойством name (у каждого человека 
+должно быть имя) и методом answer_question() для ответов на вопросы.
+
+По умолчанию объект Human будет отвечать на любой вопрос так: «Очень интересный вопрос! Не знаю.»
+От класса Human унаследуем классы Student, Mentor, CodeReviewer и Curator.
+Student должен уметь задавать вопросы. Реализуйте в классе Student метод ask_question(Human, question). 
+
+При вызове этот метод должен:
+Напечатать на экране вопрос в формате <имя человека, которому задаём вопрос>, <текст вопроса>
+Задать вопрос question человеку, объекту класса Human. Имя объекта, которому адресован вопрос, передаётся 
+при вызове метода ask_question().
+
+Объекты классов Mentor, CodeReviewer и Curator должны уметь отвечать на вопросы при вызове метода 
+answer_question(). Задан непредусмотренный вопрос — для него подойдет ответ по умолчанию.
+После того, как вы допишете код, ваша программа должна вывести на экран такой текст:"""
+
+
+class Human:
+    def __init__(self, name):
+        self.name = name
+
+    # ответ по умолчанию для всех одинаковый, можно
+    # доверить его родительскому классу
+    def answer_question(self, question):
+        print('Очень интересный вопрос! Не знаю.')
+
+
+class Student(Human):
+    #  метод ask_question() принимает параметр someone:
+    #  это объект, экземпляр класса Curator, Mentor или CodeReviewer,
+    #  которому Student задаёт вопрос;
+    #  параметр question — это просто строка
+    #  имя объекта и текст вопроса задаются при вызове метода ask_question
+    def ask_question(self, someone, question):
+        # напечатайте на экран вопрос в нужном формате
+        super().answer_question(question)
+        self.someone = someone
+        self.question = question
+        print(f'{self.someone}, {self.question}')
+        # запросите ответ на вопрос у someone
+
+        print()  # этот print выводит разделительную пустую строку
+
+
+class Curator(Human):
+    def answer_question(self, question):
+        # здесь нужно проверить, пришёл куратору знакомый вопрос или нет
+        # если да - ответить на него
+        # если нет - вызвать метод answer_question() у родительского класса
+        if question == 'Марина, мне грустненько, что делать?':
+            print('Держись, всё получится. Хочешь видео с котиками?')
         else:
-            print('В городе ' + collection[friend] + ' у меня есть друг, но мне туда не надо.')
-
-
-is_anyone_in(friends, 'Хабаровск')"""
-
-"""milk_str = 'молоковоз'
-
-# Применяем метод split() с аргументом 'о':
-new_list = milk_str.split('о')
-
-print(new_list)
-# Будет напечатано: ['м', 'л', 'к', 'в', 'з']"""
-
-
-"""counter_str = 'Раз-два-три-четыре-пять, вышел зайчик погулять'
-
-# Преобразуем строку в список, а разделителем будет дефис
-counter_list = counter_str.split('-')
-print(counter_list)
-
-# Создадим ещё одну строку
-blok_str = 'Ночь. Улица. Фонарь. Аптека'
-# Разобьём фразу по словам.
-# Разделителем будет служить сочетание точки и пробела:
-blok_list = blok_str.split('. ')
-print(blok_list)"""
-
-"""message = 'У меня опять всё сломалось и не работает соединение с интернетом!!11 Нужна стоимость работ'
-
-# Разбиваем сообщение по пробелам на слова
-words = message.split()
-# Проверяем, есть ли ключевые слова в письме
-if 'стоимость' in words:
-    print('Переслать письмо в отдел биллинга')
-elif 'сломалось' in words:
-    print('Переслать письмо в техподдержку')
-elif 'сломалось' and 'стоимость' in words:
-    print('Читаем сами')
-else:
-    print('Содержание письма не определено, придётся прочесть самостоятельно')"""
-
-"""quote_1 = 'Работает? Не трогай'
-quote_2 = 'Если твой код работает, значит это хороший код'
-quote_3 = 'Лень - главное достоинство программиста'
-
-def penult_word(message):
-    word_list = message.split()
-    return word_list[-3]
-
-# Вызовы функции готовы к работе, не изменяйте их!
-
-# Вызываем функцию penult_word с аргументом quote_1 и печатаем результат её работы.
-print(penult_word(quote_1))
-
-# То же, но с аргументом quote_2.
-print(penult_word(quote_2))
-
-# То же с аргументом quote_3.
-print(penult_word(quote_3))"""
-
-"""import datetime as dt
-
-UTC_OFFSET = {
-    'Санкт-Петербург': 3,
-    'Москва': 3,
-    'Самара': 4,
-    'Новосибирск': 7,
-    'Екатеринбург': 5,
-    'Нижний Новгород': 3,
-    'Казань': 3,
-    'Челябинск': 5,
-    'Омск': 6,
-    'Ростов-на-Дону': 3,
-    'Уфа': 5,
-    'Красноярск': 7,
-    'Пермь': 5,
-    'Воронеж': 3,
-    'Волгоград': 3,
-    'Краснодар': 3,
-    'Калининград': 2
-}
-Получите текущее время UTC: вызовите метод dt.datetime.utcnow().
-Преобразуйте поправку к UTC города в timedelta: dt.timedelta(hours = UTC_OFFSET[city])
-Получите местное время: к текущему времени UTC прибавьте timedelta.
-Верните из функции получившееся значение с помощью команды return
-
-
-def what_time(city):
-    # Напишите код тела функции;
-    # она должна вернуть текущее время в городе city
-
-    utc_time = dt.datetime.utcnow()
-    period = dt.timedelta(hours = UTC_OFFSET[city])
-    what_time = utc_time + period
-    return what_time
-
-print(what_time('Екатеринбург'))"""
-
-
-import datetime as dt
-
-DATABASE = {
-    'Серёга': 'Омск',
-    'Соня': 'Москва',
-    'Дима': 'Челябинск',
-    'Алина': 'Красноярск',
-    'Егор': 'Пермь'
-}
-
-UTC_OFFSET = {
-    'Санкт-Петербург': 3,
-    'Москва': 3,
-    'Самара': 4,
-    'Новосибирск': 7,
-    'Екатеринбург': 5,
-    'Нижний Новгород': 3,
-    'Казань': 3,
-    'Челябинск': 5,
-    'Омск': 6,
-    'Ростов-на-Дону': 3,
-    'Уфа': 5,
-    'Красноярск': 7,
-    'Пермь': 5,
-    'Воронеж': 3,
-    'Волгоград': 3,
-    'Краснодар': 3,
-    'Калининград': 2
-}
-
-"""def what_time(friend):
-    # напишите код тела функции
-    # пусть она вернет время у друга из аргумента friend
-    utc_time = dt.datetime.utcnow()
-    city = DATABASE[friend]
-    period = dt.timedelta(hours = UTC_OFFSET[city])
-    what_time = utc_time + period
-    return what_time
-def what_friend(friend):
-    names = DATABASE.keys()
-print(names)
-
-
-#print(f'В городе где живет {name} время равно: ')
-print(what_time('Соня'))"""
-
-
-"""import datetime as dt
-
-arrival_time = dt.datetime(2019, 5, 10, 19, 45)
-
-print('Самолёт прибывает в', arrival_time)
-print('Самолёт прибывает в', arrival_time.strftime('%H:%M'))
-
-first_snow = dt.datetime(2018, 9, 9)
-
-# дата последнего весеннего снега в Новосибирске в 2018
-last_snow = dt.datetime(2018, 5, 19)
-
-print(last_snow.strftime('Последний снег выпал в %U-ю неделю года.'))
-print(first_snow.strftime('А первый снег пошёл в %U-ю неделю.')) """
-
-
-"""import datetime as dt
-
-
-DATABASE = {
-    'Серёга': 'Омск',
-    'Соня': 'Москва',
-    'Дима': 'Челябинск',
-    'Алина': 'Красноярск',
-    'Егор': 'Пермь'
-}
-
-UTC_OFFSET = {
-    'Санкт-Петербург': 3,
-    'Москва': 3,
-    'Самара': 4,
-    'Новосибирск': 7,
-    'Екатеринбург': 5,
-    'Нижний Новгород': 3,
-    'Казань': 3,
-    'Челябинск': 5,
-    'Омск': 6,
-    'Ростов-на-Дону': 3,
-    'Уфа': 5,
-    'Красноярск': 7,
-    'Пермь': 5,
-    'Воронеж': 3,
-    'Волгоград': 4,
-    'Краснодар': 3,
-    'Калининград': 2
-}
-
-
-def what_time(friend):
-    utc_time = dt.datetime.utcnow()
-    city = DATABASE[friend]
-    what_time = utc_time + dt.timedelta(hours=UTC_OFFSET[city])
-    return what_time.strftime('%H:%M')
-
-
-
-print(what_time('Соня'))"""
-
-"""import datetime as dt
-
-DATABASE = {
-    'Сергей': 'Омск',
-    'Соня': 'Москва',
-    'Алексей': 'Калининград',
-    'Миша': 'Москва',
-    'Дима': 'Челябинск',
-    'Алина': 'Красноярск',
-    'Егор': 'Пермь',
-    'Коля': 'Красноярск',
-    'Артём': 'Владивосток',
-    'Петя': 'Михайловка'
-}
-
-UTC_OFFSET = {
-    'Москва': 3,
-    'Санкт-Петербург': 3,
-    'Новосибирск': 7,
-    'Екатеринбург': 5,
-    'Нижний Новгород': 3,
-    'Казань': 3,
-    'Челябинск': 5,
-    'Омск': 6,
-    'Самара': 4,
-    'Ростов-на-Дону': 3,
-    'Уфа': 5,
-    'Красноярск': 7,
-    'Воронеж': 3,
-    'Пермь': 5,
-    'Волгоград': 3,
-    'Краснодар': 3,
-    'Калининград': 2,
-    'Владивосток': 10
-}
-
-
-def format_count_friends(count_friends):
-    if count_friends == 1:
-        return '1 друг'
-    elif 2 <= count_friends <= 4:
-        return f'{count_friends} друга'
-    else:
-        return f'{count_friends} друзей'
-
-
-def what_time(city):
-    offset = UTC_OFFSET[city]
-    city_time = dt.datetime.utcnow() + dt.timedelta(hours=offset)
-    f_time = city_time.strftime("%H:%M")
-    return f_time
-
-
-def process_anfisa(query):
-    if query == 'сколько у меня друзей?':
-        count = len(DATABASE)
-        return f'У тебя {format_count_friends(count)}.'
-    elif query == 'кто все мои друзья?':
-        friends_string = ', '.join(DATABASE)
-        return f'Твои друзья: {friends_string}'
-    elif query == 'где все мои друзья?':
-        unique_cities = set(DATABASE.values())
-        cities_string = ', '.join(unique_cities)
-        return f'Твои друзья в городах: {cities_string}'
-    else:
-        return '<неизвестный запрос>'
-
-
-def process_friend(name, query):
-    if name in DATABASE:
-        city = DATABASE[name]
-        if query == 'ты где?':
-            return f'{name} в городе {city}'
-        elif query == 'который час?':
-            if city in UTC_OFFSET:
-                return f'Там сейчас {what_time(city)}'
-            else:                                             #сюда он похоже не заходит так как условие if выполнилось
-                return f'<не могу определить время в городе {city}>'# эта строчка не работает, вопрос почему?....
-
+            super().answer_question(question)
+# объявите и реализуйте классы CodeReviewer и Mentor
+class CodeReviewer(Human):
+    def answer_question(self, question):
+        if question == 'Евгений, что не так с моим проектом?':
+            print('О, вопрос про проект, это я люблю.')
         else:
-            return '<неизвестный запрос>'
-    else:
-        return f'У тебя нет друга по имени {name}'
+            super().answer_question(question)
 
+class Mentor(Human):
+    def answer_question(self, question):
+        if question == 'Ира, мне грустненько, что делать?':
+            print('Отдохни и возвращайся с вопросами по теории.')
+        elif question == 'Виталя, как устроиться на работу питонистом?':
+            print('Очень интересный вопрос! Не знаю.')
+        else:
+            super().answer_question(question)
 
+# следующий код менять не нужно, он работает, мы проверяли
+student1 = Student('Тимофей')
+curator = Curator('Марина')
+mentor = Mentor('Ира')
+reviewer = CodeReviewer('Евгений')
+friend = Human('Виталя')
 
-def process_query(query):
-    elements = query.split(', ')
-    if elements[0] == 'Анфиса':
-        return process_anfisa(elements[1])
-    else:
-        return process_friend(elements[0], elements[1])
-
-
-def runner():
-    queries = [
-        'Анфиса, сколько у меня друзей?',
-        'Анфиса, кто все мои друзья?',
-        'Анфиса, где все мои друзья?',
-        'Анфиса, кто виноват?',
-        'Коля, ты где?',
-        'Соня, что делать?',
-        'Антон, ты где?',
-        'Алексей, который час?',
-        'Артём, который час?',
-        'Антон, который час?',
-        'Петя, который час?'
-    ]
-    for query in queries:
-        print(query, '-', process_query(query))
-
-runner()"""
-
-"""import urllib.parse
-
-
-url = 'https://yandex.ru/search/?text=%D0%BA%D0%B0%D0%BA%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%20%D0%B5%D0%B7%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BD%D0%B0%20%D1%82%D0%B0%D0%BA%D1%81%D0%B8'
-
-# чтобы вычленить текст вопроса
-# разбейте строку по знаку = и возьмите
-# второй элемент получившегося списка
-
-question = url.split('=')[1]
-
-
-
-# сохраните его в переменной question
-
-# напечатайте на экран запрос в расшифрованном виде
-print(urllib.parse.unquote(question))  # ваш код здесь"""
-
-"""import requests
-
-url = 'http://wttr.in/?0T'
-
-response = requests.get(url)  # выполните HTTP-запрос
-
-print(response.text)  # напечатайте текст HTTP-ответа"""
-
-
-"""import requests
-
-
-url = 'https://wttr.in'  # не изменяйте значение URL
-
-weather_parameters = {
-    '0': '', 'T': '', 'M': '', 'lang': 'ru'
-    # добавьте параметр запроса `T`, чтобы вернулся чёрно-белый текст
-}
-params = weather_parameters
-response = requests.get((url), (params))   # передайте параметры в http-запрос
-
-print(response.text)
-
-import requests
-
-url = 'https://wttr.in'
-
-weather_parameters = {
-    '0': '',
-    'T': '',
-   # удалите этот параметр
-    'M': ''
-}
-params = weather_parameters
-request_headers = {'Accept-Language': 'ru'
-    # заполните словарь с заголовками
-}
-
-# не забудьте передать параметры и заголовки в http-запрос
-# через аргументы `params` и `headers` функции get()
-response = requests.get(url, params=weather_parameters, headers=request_headers)
-print(response.text)"""
-
-dump = {
-    1: 'единица',               # Ключ - число, значение - строка.
-    'земляника': 'ягода',       # И ключ, и значение - строки.
-    'помидор': 'ягода',         # Значение 'ягода' - не уникально. Так можно.
-    False: 0,                   # Ключ - булево значение, значение - число.
-    'лук': ['овощ', 'оружие'],  # Ключ - строка, значение - список.
-                                # Ключ - строка, а значение - словарь. Так тоже можно!
-    'англо-русский словарь': {'рука': 'hand',
-                              'нога': 'leg',
-                              'бэкенд-разработчик': 'back-end developer'
-                               },
-}
-
-print(dump['англо-русский словарь'])
+student1.ask_question(curator, 'мне грустненько, что делать?')
+student1.ask_question(mentor, 'мне грустненько, что делать?')
+student1.ask_question(reviewer, 'когда каникулы?')
+student1.ask_question(reviewer, 'что не так с моим проектом?')
+student1.ask_question(friend, 'как устроиться на работу питонистом?')
+student1.ask_question(mentor, 'как устроиться работать питонистом?')
